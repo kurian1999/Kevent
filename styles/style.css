@@ -120,7 +120,7 @@ border-radius: 10px;
     width: 403px;
 height: 53px;
 border: none;
-
+margin-top: 20px;
 font-weight: 600;
 background: transparent;
 border: 2px solid #9A2500;
@@ -139,3 +139,35 @@ border-radius: 10px;
     color: white;
     
 }
+.sub-title {
+    font-family: Poppins;
+font-style: bold;
+font-weight: normal;
+font-size: 16px;
+
+  }
+  a:link {
+    color: #9A2500;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #9A2500;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .or {
+    font-family: "Gilroy_M";
+    font-weight: 500;
+    font-size: 16px;
+    color:  #1e1e1e;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    user-select: none;
+    
+  }
+  .or .line {
+    height: 1px;
+    width: 210px;
+    background: #c4c4c4;
+  }
