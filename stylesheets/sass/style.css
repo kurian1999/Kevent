@@ -247,6 +247,50 @@
   border: 3px solid #9A2500;
 }
 
+.main .lg-container .right-lg-container .form-container .form-min-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.5vw;
+}
+
+.main .lg-container .right-lg-container .form-container .form-min-group .form-label-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .lg-container .right-lg-container .form-container .form-min-group label {
+  font-size: 0.9vw;
+  font-weight: 500;
+  margin-bottom: 0.5vw;
+}
+
+.main .lg-container .right-lg-container .form-container .form-min-group .form-min-control {
+  width: 99%;
+  height: 3.5vw;
+  border-radius: 10px;
+  border: 2px solid #9A2500;
+  padding: 0.5vw 1vw;
+  font-size: 1vw;
+  font-weight: 300;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .lg-container .right-lg-container .form-container .form-min-group .form-min-control:focus {
+  border: 3px solid #9A2500;
+}
+
 @-webkit-keyframes fadeInRight {
   0% {
     opacity: 0;

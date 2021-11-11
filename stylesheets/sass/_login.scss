@@ -154,6 +154,7 @@
             font-size: 0.9vw;
             font-weight: 500;
             margin-bottom: 0.5vw;
+            
           }
           
 
@@ -173,6 +174,39 @@
           }
           
           
+          
+        }
+        .form-min-group{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.5vw;
+          .form-label-flex{
+            display: flex;
+            flex-direction: column;
+           
+          }
+          label {
+              font-size: 0.9vw;
+            font-weight: 500;
+            margin-bottom: 0.5vw;
+           
+          }
+          .form-min-control{
+            width: 99%;
+            height: 3.5vw;
+            border-radius: 10px;
+            border: 2px solid $primary-color;
+            padding: 0.5vw 1vw;
+            font-size: 1vw;
+            font-weight: 300;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+            &:focus {
+              border: 3px solid $primary-color;
+            }
+          }
+
         }
       }
     }
