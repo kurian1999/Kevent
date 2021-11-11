@@ -1,5 +1,71 @@
+@import "./component.scss";
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
+  }
+  .containe{ 
+    background-image:url("../image/vendor_bg.png");
+    display: flex;
+    justify-content: center;
+    height: 120vh;
+
+  
+  .login-form{
+
+        background: rgba(255, 255, 255, 0.68);
+        width: 575px;
+        height: 700px;
+        padding-left: 86px;
+        padding-right: 86px;
+        border-radius: 0px 0px 30px 30px;
+        backdrop-filter: blur(25px);
+        box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
+        
+    }
+    .progress-container{
+      width: 100%;
+      .progressbar{
+          counter-reset: step;
+        li{
+          list-style-type:none;
+          float: left;
+          width: 33.33%;
+          color:$text-white;
+          text-align: center;
+         
+        }
+        li:before{
+          content: counter(step);
+          counter-increment: step;
+          width: 40px;
+          height: 40px;
+          line-height: 210%;
+          border: 1px solid $primarycolor;
+          background-color: #DBC7C0;
+          display: block;
+          text-align: center;
+          border-radius: 50%;
+          
+        }
+        li:after{
+          content: '';
+          position: absolute;
+          width: 45%;
+          height: 1px;
+          background-color: $primarycolor;
+          top: 35px;
+          left: 25%;
+          z-index: -1;
+
+        }
+        li:first-child:after{
+          content: none;
+        }
+        li.active{
+          color: $primarycolor;
+        }
+      }
+    }
+
   }
