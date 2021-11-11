@@ -225,9 +225,7 @@
 }
 
 .main .lg-container .right-lg-container .form-container .form-group label {
-  font-size: 0.9vw;
-  font-weight: 500;
-  margin-bottom: 0.5vw;
+  font-size: 18px;
 }
 
 .main .lg-container .right-lg-container .form-container .form-group .form-control {
@@ -252,6 +250,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -269,9 +269,7 @@
 }
 
 .main .lg-container .right-lg-container .form-container .form-min-group label {
-  font-size: 0.9vw;
-  font-weight: 500;
-  margin-bottom: 0.5vw;
+  font-size: 16px;
 }
 
 .main .lg-container .right-lg-container .form-container .form-min-group .form-min-control {
@@ -289,6 +287,30 @@
 
 .main .lg-container .right-lg-container .form-container .form-min-group .form-min-control:focus {
   border: 3px solid #9A2500;
+}
+
+.main .lg-container .right-lg-container .form-container .form-radio-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 66px;
+          column-gap: 66px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .lg-container .right-lg-container .form-container .form-radio-set2-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 85px;
+          column-gap: 85px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 @-webkit-keyframes fadeInRight {

@@ -151,9 +151,10 @@
           justify-content: center;
           margin-bottom: 1.5vw;
           label {
-            font-size: 0.9vw;
-            font-weight: 500;
-            margin-bottom: 0.5vw;
+             font-size:18px;
+            
+
+           
             
           }
           
@@ -179,6 +180,7 @@
         .form-min-group{
           width: 100%;
           display: flex;
+          column-gap: 50px;
           justify-content: center;
           margin-bottom: 1.5vw;
           .form-label-flex{
@@ -187,9 +189,8 @@
            
           }
           label {
-              font-size: 0.9vw;
-            font-weight: 500;
-            margin-bottom: 0.5vw;
+              
+             font-size:16px;
            
           }
           .form-min-control{
@@ -207,6 +208,18 @@
             }
           }
 
+        }
+        .form-radio-group{
+           width: 100%;
+          display: flex;
+           column-gap: 66px;
+           justify-content: flex-start;
+        }
+        .form-radio-set2-group{
+           width: 100%;
+          display: flex;
+           column-gap:85px;
+           justify-content: flex-start;
         }
       }
     }
