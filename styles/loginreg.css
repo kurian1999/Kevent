@@ -98,6 +98,11 @@
   font-size: 18px;
   border-radius: 10px;
   border: none;
+  accent-color: #9A2500;
+}
+
+.flex-input input[type="radio"] {
+  accent-color: #9A2500;
 }
 
 .flex-input label {

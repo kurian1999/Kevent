@@ -16,7 +16,11 @@ border-radius: 10px;
     font-size:18px;
     border-radius: 10px;
     border: none;
+    accent-color: $primarycolor;
 }
+ input[type="radio"]{
+     accent-color: $primarycolor;
+ }
 label{
     width: 83px;
 height: 24px;
