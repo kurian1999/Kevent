@@ -86,6 +86,7 @@
                 border: none !important;
                 transition: 1s ease-in-out;
             }
+            
         }
         
         .fieldset{
@@ -220,6 +221,30 @@
           display: flex;
            column-gap:85px;
            justify-content: flex-start;
+        }
+        .form-checkbox-group{
+          display: flex;
+           align-items: center;
+          column-gap: 20px;
+          .checklabel{
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            align-items: center;
+            
+          }
+        }
+        .form-checkbox-group2{
+          display: flex;
+           align-items: center;
+          column-gap: 33px;
+          .checklabel{
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            align-items: center;
+            
+          }
         }
       }
     }

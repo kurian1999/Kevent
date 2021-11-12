@@ -46,22 +46,22 @@
                 <div class="d-flex ">
                   <div class="col">
                     <div class="form-radio-group">
-                      <div class="form-label-flex">
-                        <input type="radio" name="passwordvd" id="password" />
+                      <div class="">
+                        <input type="radio" name="type" id="radio-type" />
                         <label for="">Corporation</label>
                       </div>
-                      <div class="form-label-flex">
-                        <input type="radio" name="passwordvd" id="password" />
+                      <div class="">
+                        <input type="radio" name="type" id="radio-type" />
                         <label for="">Partnership</label>
                       </div>
                     </div>
                     <div class="form-radio-set2-group">
-                      <div class="form-label-flex">
-                        <input type="radio" name="passwordvd" id="password" />
+                      <div class="">
+                        <input type="radio" name="type" id="radio-type" />
                         <label for="">Individual</label>
                       </div>
-                      <div class="form-label-flex">
-                        <input type="radio" name="passwordvd" id="password" />
+                      <div class="">
+                        <input type="radio" name="type" id="radio-type" />
                         <label for="">Other</label>
                       </div>
                     </div>
@@ -106,20 +106,42 @@
 
             <!-- 2nd container -->
             <fieldset class="fieldset">
-              <div class="form-group">
-                <label for="role">Select your role <sup>*</sup></label>
-                <select name="role" id="role" class="form-control">
-                  <option value="" disabled selected>Select your role</option>
-                  <option value="1">Admin</option>
-                  <option value="2">Manager</option>
-                  <option value="3">Employee</option>
-                </select>
+              <div class="head-form-min">
+                <h5>Certifications</h5>
               </div>
-              <div class="form-group">
-                <label for="referel">Referral code(if any)</label>
-                <input type="text" name="passwordvd" id="password" class="form-control" placeholder="RXL23" />
+              <div class="form-min-group">
+                <div class="form-label-flex">
+                  <label for="tin">TIN no<sup>*</sup></label>
+                  <input type="text" name="tincerf" id="tincerfid" class="form-min-control" placeholder=""
+                    autocomplete="off" />
+                </div>
+                <div class="form-label-flex">
+                  <label for="pin">Expiration date <sup>*</sup></label>
+                  <input type="date" name="zip" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                </div>
               </div>
-
+              <div class="form-min-group">
+                <div class="form-label-flex">
+                  <label for="tin">VAT no.<sup>*</sup></label>
+                  <input type="text" name="tincerf" id="tincerfid" class="form-min-control" placeholder=""
+                    autocomplete="off" />
+                </div>
+                <div class="form-label-flex">
+                  <label for="pin">Expiration date <sup>*</sup></label>
+                  <input type="date" name="zip" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                </div>
+              </div>
+              <div class="form-min-group">
+                <div class="form-label-flex">
+                  <label for="tin">Servicetax .no<sup>*</sup></label>
+                  <input type="text" name="tincerf" id="tincerfid" class="form-min-control" placeholder=""
+                    autocomplete="off" />
+                </div>
+                <div class="form-label-flex">
+                  <label for="pin">Expiration date <sup>*</sup></label>
+                  <input type="date" name="zip" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                </div>
+              </div>
               <div class="d-flex justify-content-between align-items-center">
                 <button type="button" class="btn-secondary-outline mt-4 pre-btn">Back</button>
                 <button id="next" type="button" class="btn-primary mt-4 next">Next</button>
@@ -128,21 +150,73 @@
 
             <!-- 3rd container -->
             <fieldset class="fieldset">
-              <div class="form-group">
-                <label for="name">Name <sup>*</sup></label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="John Wick" required
-                  autocomplete="off" />
-              </div>
-              <div class="form-group">
-                <label for="name">Mobile <sup>*</sup></label>
-                <input type="number" name="mob" id="mob" class="form-control" placeholder="8590456210" required
-                  autocomplete="off" />
-              </div>
-              <div class="form-group">
-                <label for="name">Date of birth <sup>*</sup></label>
-                <input type="date" name="dob" id="dob" class="form-control" required autocomplete="off" />
-              </div>
+              <div class="form-checkbox-group">
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Karsaragod</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Kannur</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Wayanad</label>
+                </div>
 
+              </div>
+              <div class="form-checkbox-group2">
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Kozhikode</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Malappuram</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Palakkad</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Thrissur</label>
+                </div>
+
+              </div>
+              <div class="form-checkbox-group2">
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Eranakulam</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Idukki</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Kottayam</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Alappuzha</label>
+                </div>
+
+              </div>
+              <div class="form-checkbox-group4">
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Pathanamthitta</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Kollam</label>
+                </div>
+                <div class="checklabel">
+                  <input type="checkbox" name="checkdrictict" id="iddict" />
+                  <label for="checkbox" name="checkdrictict">Thiruvananthapuram</label>
+                </div>
+              </div>
               <div class="d-flex justify-content-between align-items-center">
                 <button type="button" class="btn-secondary-outline mt-4 pre-btn">Back</button>
                 <button type="submit" class="btn-primary mt-4">Submit</button>
