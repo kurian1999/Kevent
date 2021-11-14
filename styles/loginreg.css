@@ -10,20 +10,14 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 32px;
-}
-
-.flex-container div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .flex-container a {
   text-decoration: none;
-  color: #9A2500;
-  width: 143px;
-  height: 24px;
-  padding-left: 87px;
+  color: #9a2500;
   font-family: Poppins;
   font-style: normal;
   text-align: right;
@@ -31,6 +25,9 @@
 
 .containe {
   background-image: url("/image/bunch-flowers-leaves-table 1.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,42 +40,41 @@
   overflow: hidden;
 }
 
-.logo {
-  background-image: url("/image/Group 2.png");
-  width: 253px;
-  height: 62.1px;
+.containe .login-form {
+  background: rgba(255, 255, 255, 0.68);
+  height: 100vh;
+  padding: 64px 86px 0 86px;
+  border-radius: 0px 30px 30px 0px;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  -webkit-box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
 }
 
-.qote {
+.containe .logo {
+  width: 253px;
+  height: 62.1px;
+  margin: auto;
+}
+
+.containe .qote {
   width: 403px;
-  height: 48px;
   font-family: Poppins;
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
+  margin: auto;
+  padding-top: 20px;
 }
 
-.spok {
+.containe .spok {
   height: 17px;
   font-size: 11px;
   font-family: Poppins;
   font-style: italic;
   text-align: center;
-}
-
-.login-form {
-  background: rgba(255, 255, 255, 0.68);
-  width: 575px;
-  height: 700px;
-  padding-left: 86px;
-  padding-right: 86px;
-  border-radius: 0px 30px 30px 0px;
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
-  -webkit-box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
-          box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
 }
 
 .flex-input {
@@ -92,17 +88,18 @@
   margin-bottom: 32px;
 }
 
-.flex-input input[type="text"], .flex-input [type="password"] {
-  width: 403px;
+.flex-input input[type="text"],
+.flex-input [type="password"] {
+  width: 100%;
   height: 53px;
   font-size: 18px;
   border-radius: 10px;
   border: none;
-  accent-color: #9A2500;
+  accent-color: #9a2500;
 }
 
 .flex-input input[type="radio"] {
-  accent-color: #9A2500;
+  accent-color: #9a2500;
 }
 
 .flex-input label {
@@ -133,31 +130,31 @@
 }
 
 .radio-btn::-moz-selection {
-  color: #9A2500;
+  color: #9a2500;
 }
 
 .radio-btn::selection {
-  color: #9A2500;
+  color: #9a2500;
 }
 
 .prbtn {
-  width: 403px;
+  width: 100%;
   height: 53px;
   font-weight: 600;
-  background: #9A2500;
+  background: #9a2500;
   border-radius: 10px;
   color: white;
   border: none;
 }
 
 .scebtn {
-  width: 403px;
+  width: 100%;
   height: 53px;
   border: none;
   margin-top: 20px;
   font-weight: 600;
   background: transparent;
-  border: 2px solid #9A2500;
+  border: 2px solid #9a2500;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
@@ -170,7 +167,7 @@
 
 .scebtn:hover {
   cursor: pointer;
-  background-color: #9A2500;
+  background-color: #9a2500;
   color: white;
 }
 
@@ -182,12 +179,12 @@
 }
 
 a:link {
-  color: #9A2500;
+  color: #9a2500;
   text-decoration: none;
 }
 
 a:visited {
-  color: #9A2500;
+  color: #9a2500;
   background-color: transparent;
   text-decoration: none;
 }

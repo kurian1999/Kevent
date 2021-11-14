@@ -1,184 +1,169 @@
-@mixin primary-btn($width){
-width:$width ;
-height: 53px;
-font-weight: 600;
-background:$primarycolor;
-border-radius: 10px;
- color:white;
- border: none;
 
-}
-@mixin input() {
-    input[type="text"],[type="password"]
-{
-  width: 403px;
+@mixin primary-btn($width) {
+  width: $width;
   height: 53px;
-    font-size:18px;
+  font-weight: 600;
+  background: $primarycolor;
+  border-radius: 10px;
+  color: white;
+  border: none;
+}
+@mixin input($width) {
+  input[type="text"],
+  [type="password"] {
+    width: $width;
+    height: 53px;
+    font-size: 18px;
     border-radius: 10px;
     border: none;
     accent-color: $primarycolor;
-}
- input[type="radio"]{
-     accent-color: $primarycolor;
- }
-label{
-    width: 83px;
-height: 24px;
-
-
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-}
-}
-    
-    
-$primarycolor:#9A2500;
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
   }
-.flex-container{
-    display:flex;
-    margin-bottom: 32px;
-    div{
-        flex: 1;
-    }
-    a{
-        text-decoration: none;
-        color: $primarycolor;
-        width: 143px;
+  input[type="radio"] {
+    accent-color: $primarycolor;
+  }
+  label {
+    width: 83px;
     height: 24px;
-    padding-left:87px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
+
+$primarycolor: #9a2500;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    color: $primarycolor;
     font-family: Poppins;
     font-style: normal;
     text-align: right;
-    }
-    
+  }
 }
-.containe{
-    background-image:url("/image/bunch-flowers-leaves-table\ 1.png") ;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-}
-.logo{
-    background-image: url("/image/Group\ 2.png");
+.containe {
+  background-image: url("/image/bunch-flowers-leaves-table\ 1.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  .login-form {
+    background: rgba(255, 255, 255, 0.68);
+    height: 100vh;
+    padding: 64px 86px 0 86px;
+    border-radius: 0px 30px 30px 0px;
+    backdrop-filter: blur(25px);
+    box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
+  }
+  .logo {
     width: 253px;
-height: 62.1px;
-}
-.qote{
+    height: 62.1px;
+    margin: auto;
+  }
+  .qote {
     width: 403px;
-height: 48px;
-
-
-font-family: Poppins;
-font-style: italic;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
-text-align: center;
-}
-    
-
-.spok{
-    
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+  }
+  .spok {
     height: 17px;
-        font-size: 11px;
-        font-family: Poppins;
+    font-size: 11px;
+    font-family: Poppins;
     font-style: italic;
     text-align: center;
-    }
-
-    .login-form{
-
-        background: rgba(255, 255, 255, 0.68);
-        width: 575px;
-        height: 700px;
-        padding-left: 86px;
-        padding-right: 86px;
-        border-radius: 0px 30px 30px 0px;
-        backdrop-filter: blur(25px);
-        box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
-        
-    }
-    .flex-input {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 32px;
-        @include input();
-    }       
-    .flex-radio{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 10vw;
-    margin: 0.3vw 0;
-}
-.radio-btn::selection{
-    color:$primarycolor;
+  }
 }
 
 
-.prbtn{
-@include primary-btn(403px);
-}
-.scebtn{
-    width: 403px;
-height: 53px;
-border: none;
-margin-top: 20px;
-font-weight: 600;
-background: transparent;
-border: 2px solid $primarycolor;
-box-sizing: border-box;
-border-radius: 10px;
 
+
+
+.flex-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  @include input(100%);
 }
-.prbtn:hover{
-    cursor: pointer;
-    background-color: #6d1900;
-    
+.flex-radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 10vw;
+  margin: 0.3vw 0;
 }
-.scebtn:hover{
-    cursor: pointer;
-    background-color: $primarycolor;
-    color: white;
-    
+.radio-btn::selection {
+  color: $primarycolor;
+}
+
+.prbtn {
+  @include primary-btn(100%);
+}
+.scebtn {
+  width: 100%;
+  height: 53px;
+  border: none;
+  margin-top: 20px;
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid $primarycolor;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.prbtn:hover {
+  cursor: pointer;
+  background-color: #6d1900;
+}
+.scebtn:hover {
+  cursor: pointer;
+  background-color: $primarycolor;
+  color: white;
 }
 .sub-title {
-    font-family: Poppins;
-font-style: bold;
-font-weight: normal;
-font-size: 16px;
-
-  }
-  a:link {
-    color: $primarycolor;
-    text-decoration: none;
-  }
-  a:visited {
-    color: $primarycolor;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  .or {
-    font-family: "Gilroy_M";
-    font-weight: 500;
-    font-size: 16px;
-    color:  #1e1e1e;
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    user-select: none;
-    
-  }
-  .or .line {
-    height: 1px;
-    width: 210px;
-    background: #c4c4c4;
-  }
+  font-family: Poppins;
+  font-style: bold;
+  font-weight: normal;
+  font-size: 16px;
+}
+a:link {
+  color: $primarycolor;
+  text-decoration: none;
+}
+a:visited {
+  color: $primarycolor;
+  background-color: transparent;
+  text-decoration: none;
+}
+.or {
+  font-family: "Gilroy_M";
+  font-weight: 500;
+  font-size: 16px;
+  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  user-select: none;
+}
+.or .line {
+  height: 1px;
+  width: 210px;
+  background: #c4c4c4;
+}

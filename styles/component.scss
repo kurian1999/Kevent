@@ -21,10 +21,10 @@ border-radius: 10px;
  border: none;
 
 }
-@mixin input() {
+@mixin input($width) {
     input[type="text"],[type="password"]
 {
-  width: 403px;
+  width: $width;
   height: 53px;
     font-size:18px;
     border-radius: 10px;
