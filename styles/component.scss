@@ -1,53 +1,56 @@
 //============Colors==================
-$primarycolor:#9A2500;
+$primarycolor: #9a2500;
 $text-dark: #000000;
 $text-light: #a4afb4;
-$text-white:white;
+$text-white: white;
 $secondary-color: #e0eaff;
-$body-color:#f5f5f5;
+$body-color: #f5f5f5;
 $primary-hover-color: rgba(2, 47, 150, 0.8);
 $secondary-hover-color: #c7d8fc;
 
 //=============Mixins=================
 
 //==========input Fields=============
-@mixin primary-btn($width){
-width:$width ;
-height: 53px;
-font-weight: 600;
-background:$primarycolor;
-border-radius: 10px;
- color:white;
- border: none;
-
-}
-@mixin input() {
-    input[type="text"],[type="password"]
-{
-  width: 403px;
+@mixin primary-btn($width) {
+  width: $width;
   height: 53px;
-    font-size:18px;
+  font-weight: 600;
+  background: $primarycolor;
+  border-radius: 10px;
+  color: white;
+  border: none;
+}
+
+@mixin input($width) {
+  input[type="text"],
+  [type="password"] {
+    width: $width;
+    height: 53px;
+    font-size: 18px;
     border-radius: 10px;
     border: none;
-}
-label{
+    accent-color: $primarycolor;
+  }
+  input[type="radio"] {
+    accent-color: $primarycolor;
+  }
+  label {
     width: 83px;
-height: 24px;
+    height: 24px;
 
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
 
-font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
+@mixin formblur($border, $height) {
+  background: rgba(255, 255, 255, 0.68);
+  height: $height;
+  width: 42vw;
+  padding: 64px 86px 0 86px;
+  border-radius: $border;
+  backdrop-filter: blur(25px);
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
 }
-}
-    @mixin formblur($border,$height) {
-        background: rgba(255, 255, 255, 0.68);
-        width: 575px;
-        height: $height;
-        padding-left: 86px;
-        padding-right: 86px;
-        border-radius: $border;
-        backdrop-filter: blur(25px);
-        box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
-    }
