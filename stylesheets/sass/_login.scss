@@ -237,13 +237,24 @@
         .form-checkbox-group2{
           display: flex;
            align-items: center;
-          column-gap: 33px;
+          column-gap: 20px;
           .checklabel{
             display: flex;
             align-items: center;
             column-gap: 15px;
             align-items: center;
             
+          }
+        }
+        .form-checkbox-group4{
+           display: flex;
+           align-items: center;
+           column-gap: 20px;
+           .checklabel{
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            align-items: center;
           }
         }
       }

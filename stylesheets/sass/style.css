@@ -343,11 +343,34 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 33px;
-          column-gap: 33px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .main .lg-container .right-lg-container .form-container .form-checkbox-group2 .checklabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  align-items: center;
+}
+
+.main .lg-container .right-lg-container .form-container .form-checkbox-group4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.main .lg-container .right-lg-container .form-container .form-checkbox-group4 .checklabel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

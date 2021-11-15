@@ -51,7 +51,7 @@
   width: 40px;
   height: 40px;
   line-height: 210%;
-  border: 1px solid #9A2500;
+  border: 1px solid #9a2500;
   background-color: #DBC7C0;
   display: block;
   text-align: center;
@@ -63,7 +63,7 @@
   position: absolute;
   width: 45%;
   height: 1px;
-  background-color: #9A2500;
+  background-color: #9a2500;
   top: 35px;
   left: 25%;
   z-index: -1;
@@ -74,6 +74,6 @@
 }
 
 .containe .progress-container .progressbar li.active {
-  color: #9A2500;
+  color: #9a2500;
 }
 /*# sourceMappingURL=mainstyle.css.map */
