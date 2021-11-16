@@ -21,39 +21,38 @@ include "./include/condb.php";
 
 
       
-        if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['rebtn']))
-        {
-            // $password=$password;
+        // Login check
+    if(isset($_POST['logbtn']))
+    {
+        // Empty check
+        if (!empty($_POST['username']) and !empty($_POST['pass'])) {
+            // Collecting values
+            extract($_POST);
             //Check if mobile already exisit
-            $checkLogin = "SELECT * FROM `tbl_registration` WHERE `houseno`='$userName' and `password`='$password' and `status`=1";
+            $checkLogin = "SELECT * FROM `tbl_registration` WHERE `email`='$userN' and `password`='$pass'";
             $checkLoginResult = mysqli_query($conn, $checkLogin);
             $checkLoginCount = mysqli_num_rows($checkLoginResult);
-            //Check Admin
-            // $adminCheck="SELECT * FROM `tbl_admin` WHERE `username`='$userName' and `password`='$password'";
-            // $adminCheckResult = mysqli_query($conn,$adminCheck);
-            // $adminCheckCount=mysqli_num_rows($adminCheckResult);
             //No user exists
             if($checkLoginCount==1)
             {
                 $userData=mysqli_fetch_assoc($checkLoginResult);
-                $_SESSION['e-wardId'] = session_id();
-                $_SESSION['fname'] = $userData['fname'];
-                $_SESSION['rid'] = $userData['rid'];
-                header("Location: ../../dashboard.php");
+                $_SESSION['proAnalysisSession'] = session_id();
+                $_SESSION['userName'] = $userData['user_name'];
+                $_SESSION['userID'] = $userData['user_id'];
+                header("Location:");
                 die();
             }
-            // elseif($adminCheckCount==1){
-            //     $_SESSION['adminId'] = session_id();
-            //     $_SESSION['aid']=$userData['aid'];
-            //     header("Location: ../../admin.php");
-            //     die();
-            // }
             else
             {
                 $_SESSION['loginMessage'] = "User Login Failed";
-                header("Location: ../../index.php");
+                header("Location: ./index.html");
                 die();
             }
-        }
+        } else {
+            $_SESSION['loginMessage'] = "Please fill all fields";
+            header("Location: ./index.html");
+            die();
+        } 
+}
 
 ?>
