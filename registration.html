@@ -12,7 +12,7 @@
 
 <body>
     <div class="containe">
-        <form action="" class="login-form">
+        <form action="register.php" class="login-form" method="post">
             <div class="logo">
                 <img src="./image/Group 2.png" alt="" srcset="">
             </div>
@@ -22,12 +22,12 @@
                 <label for="">Select Role </label>
                 <div class="radioGrp">
                     <label class="radio">
-                        <input type="radio" name="gender" checked />
+                        <input type="radio" value="vendor" name="gender" checked />
                         Vendor
                         <span class="check"></span>
                     </label>
                     <label class="radio">
-                        <input type="radio" name="gender" />
+                        <input type="radio" value="user" name="gender" />
                         User
                         <span class="check"></span>
                     </label>
@@ -37,15 +37,15 @@
     
             <div class="flex-input">
                 <label for="">Email_id:</label>
-                <input type="text" name="" id="">
+                <input type="text" name="email" id="">
             </div>
             <div class="flex-input">
                 <label for="">password:</label>
-                <input type="password" name="" id="">
+                <input type="password" name="password" id="">
             </div>
     
             <div class="flex-input">
-                <input type="button" class="prbtn" value="Register">
+                <input type="submit" class="prbtn" value="Register" name="regbtn">
             </div>
             <div class="sub-title">
                 Already have an account?<a href="./index.html">Login</a>

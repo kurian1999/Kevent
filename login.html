@@ -12,7 +12,7 @@
 
 <body>
     <div class="containe">
-        <form action="" class="login-form">
+        <form action="register.php" class="login-form" method="post">
             <div class="logo">
                 <img src="./image/Group 2.png" alt="" srcset="">
             </div>
@@ -20,11 +20,11 @@
             <h6 class="spok">~Hazrat Inavat Khan</h6>
             <div class="flex-input">
                 <label for="">Username:</label>
-                <input type="text" name="" id="">
+                <input type="text" name="username" id="" autocomplete="off">
             </div>
             <div class="flex-input">
                 <label for="">password:</label>
-                <input type="password" name="" id="">
+                <input type="password" name="pass" id="" autocomplete="off">
             </div>
             <div class="flex-container">
                 <div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="flex-input">
-                <input type="button" class="prbtn" value="login">
+                <input type="submit" class="prbtn" value="login" name="rebtn">
             </div>
             <div class="or">
                 <div class="line"></div>
@@ -48,7 +48,7 @@
             </div>
         </form>
     </div>
-    
+
 </body>
 
 </html>
