@@ -1,14 +1,14 @@
-
+<a href=""></a>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bootstrap Web Design</title>
-        <?php require ''; ?><!--css links. file found in utils folder-->
-        <?php require 'utils/scripts.php'; ?><!--js links. file found in utils folder-->
+        <?php require './links/styles.php'; ?>
+        <?php require './links/scripts.php'; ?>
     </head>
     <body>
-        <?php require 'utils/header.php'; ?><!--header content. file found in utils folder-->
+        <?php require './links/header.php'; ?><!--header content. -->
         <div class = "content"><!--body content holder-->
             <div class = "container">
                 <div class = "col-md-12"><!--body content title holder with 12 grid columns-->
@@ -49,6 +49,7 @@
             <hr>
             </div>
             </div>
+          
 
             <div class="row">
                 <section>
