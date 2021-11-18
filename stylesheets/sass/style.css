@@ -382,6 +382,10 @@
   align-items: center;
 }
 
+.main .lg-container .right-lg-container .form-container #canvas {
+  border: 2px solid black;
+}
+
 @-webkit-keyframes fadeInRight {
   0% {
     opacity: 0;

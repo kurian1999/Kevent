@@ -19,41 +19,30 @@ include "./include/condb.php";
             }
         }
 
-
+// login
+      if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
       
-        if(isset($_POST['username']) && isset($_POST['pass']) && isset($_POST['rebtn']))
-        {
-            // $password=$password;
-            //Check if mobile already exisit
-            $checkLogin = "SELECT * FROM `tbl_registration` WHERE `houseno`='$userName' and `password`='$password' and `status`=1";
-            $checkLoginResult = mysqli_query($conn, $checkLogin);
-            $checkLoginCount = mysqli_num_rows($checkLoginResult);
-            //Check Admin
-            // $adminCheck="SELECT * FROM `tbl_admin` WHERE `username`='$userName' and `password`='$password'";
-            // $adminCheckResult = mysqli_query($conn,$adminCheck);
-            // $adminCheckCount=mysqli_num_rows($adminCheckResult);
-            //No user exists
-            if($checkLoginCount==1)
-            {
-                $userData=mysqli_fetch_assoc($checkLoginResult);
-                $_SESSION['e-wardId'] = session_id();
-                $_SESSION['fname'] = $userData['fname'];
-                $_SESSION['rid'] = $userData['rid'];
-                header("Location: ../../dashboard.php");
-                die();
-            }
-            // elseif($adminCheckCount==1){
-            //     $_SESSION['adminId'] = session_id();
-            //     $_SESSION['aid']=$userData['aid'];
-            //     header("Location: ../../admin.php");
-            //     die();
-            // }
-            else
-            {
-                $_SESSION['loginMessage'] = "User Login Failed";
-                header("Location: ../../index.php");
-                die();
-            }
-        }
-
+      $myusername = mysqli_real_escape_string($conn,$_POST['username']);
+      $mypass = mysqli_real_escape_string($conn,$_POST['pass']); 
+      
+      $sql = "SELECT * FROM `tbl_registration` WHERE `email`='$myusername' and `password`='$mypass'";
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      // $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+         // session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         
+         header("location: ../EventManagementSystems/index.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+       
 ?>
