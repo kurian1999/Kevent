@@ -1,10 +1,12 @@
 window.addEventListener("load", () => {
 
     const canvas = document.querySelector("#canvas");
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
 
-    
-    // variable
+
+
+
+
     let painting = false;
 
     function startpostion(e) {
@@ -32,3 +34,7 @@ window.addEventListener("load", () => {
     canvas.addEventListener("mouseup", finishposition);
     canvas.addEventListener("mousemove", draw);
 });
+
+
+
+
