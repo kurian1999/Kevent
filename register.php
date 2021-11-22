@@ -11,8 +11,9 @@ include "./include/condb.php";
             $ins="INSERT INTO `tbl_registration`( `email`, `User_type_id`, `password`) VALUES ('$email','$gender','$password')";
             $ins_res=mysqli_query($conn,$ins);
             if($ins_res){
-                header("Location: ./login.html");
-            }else{
+                header("Location:./login.html");
+            }
+            else{
                 echo '<script language="javascript" type="text/javascript">';
 				echo 'alert("Error")';
 				echo '</script>';
@@ -23,10 +24,10 @@ include "./include/condb.php";
       if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $myusername = mysqli_real_escape_string($conn,$_POST['username']);
-      $mypass = mysqli_real_escape_string($conn,$_POST['pass']); 
+      $username = mysqli_real_escape_string($conn,$_POST['username']);
+      $pass = mysqli_real_escape_string($conn,$_POST['pass']); 
       
-      $sql = "SELECT * FROM `tbl_registration` WHERE `email`='$myusername' and `password`='$mypass'";
+      $sql = "SELECT * FROM `tbl_registration` WHERE `email`='$username' and `password`='$pass'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       // $active = $row['active'];
