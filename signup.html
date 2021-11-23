@@ -11,7 +11,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.4/signature_pad.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.4/signature_pad.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
       <div class="right-lg-container">
         <div class="form-container">
-          <form id="msform" action="login.php" method="post">
+          <form id="msform" action="vendorreg.php" method="post">
             <!-- progressbar -->
             <div class="progress-container">
               <div class="line"></div>
@@ -118,29 +118,32 @@
                 </div>
                 <div class="form-label-flex">
                   <label for="pin">Expiration date <sup>*</sup></label>
-                  <input type="date" name="zip" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                  <input type="date" name="tinexp" id="zipid" class="form-min-control" placeholder=""
+                    autocomplete="off" />
                 </div>
               </div>
               <div class="form-min-group">
                 <div class="form-label-flex">
                   <label for="tin">VAT no.<sup>*</sup></label>
-                  <input type="text" name="tincerf" id="tincerfid" class="form-min-control" placeholder=""
+                  <input type="text" name="vatcerf" id="tincerfid" class="form-min-control" placeholder=""
                     autocomplete="off" />
                 </div>
                 <div class="form-label-flex">
                   <label for="pin">Expiration date <sup>*</sup></label>
-                  <input type="date" name="zip" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                  <input type="date" name="vatexp" id="zipid" class="form-min-control" placeholder=""
+                    autocomplete="off" />
                 </div>
               </div>
               <div class="form-min-group">
                 <div class="form-label-flex">
                   <label for="tin">Servicetax .no<sup>*</sup></label>
-                  <input type="text" name="tincerf" id="tincerfid" class="form-min-control" placeholder=""
+                  <input type="text" name="servicecerf" id="tincerfid" class="form-min-control" placeholder=""
                     autocomplete="off" />
                 </div>
                 <div class="form-label-flex">
                   <label for="pin">Expiration date <sup>*</sup></label>
-                  <input type="date" name="zip" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                  <input type="date" name="serviceexp" id="zipid" class="form-min-control" placeholder=""
+                    autocomplete="off" />
                 </div>
               </div>
               <div class="d-flex justify-content-between align-items-center">
@@ -228,14 +231,18 @@
                   <label for="checkbox" name="checkdrictict">Thiruvananthapuram</label>
                 </div>
               </div>
-              <div>
-                <h5>Signature:</h5>
-                <canvas id="canvas" width="360"></canvas>
-
+              <div class="form-group">
+                <label for="username">Username <sup>*</sup></label>
+                <input type="text" name="username" id="text" class="form-control" placeholder="KEvent"
+                  autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <label for="password">Password <sup>*</sup></label>
+                <input type="password" name="passvend" id="text" class="form-control" placeholder="KEvent" autocomplete="off" />
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <button type="button" class="btn-secondary-outline mt-4 pre-btn">Back</button>
-                <button type="submit" class="btn-primary mt-4">Submit</button>
+                <button type="submit" class="btn-primary mt-4" name="venregbtn">Submit</button>
               </div>
 
             </fieldset>

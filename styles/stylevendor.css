@@ -1,0 +1,336 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding: 15px 30px;
+}
+
+nav .icon {
+  font-size: 35px;
+  font-weight: 800px;
+  color: #4B4B4B;
+  cursor: pointer;
+}
+
+nav ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0px;
+}
+
+nav ol li {
+  margin: 0 2px;
+}
+
+nav ol li a {
+  color: #4B4B4B;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+nav ol li a:hover {
+  background: #4B4B4B;
+  color: #fff;
+}
+
+nav .search_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 0;
+  height: 35px;
+  line-height: 35px;
+}
+
+nav .search_box input {
+  border: 1px solid #4B4B4B;
+  outline: none;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 20px;
+  width: 350px;
+}
+
+nav .search_box span {
+  color: #4B4B4B;
+  font-size: 20px;
+  background: #fff;
+  height: 100%;
+  padding: 8px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+nav .search_box span:hover {
+  color: #fff;
+}
+
+nav .search_box span::after {
+  height: 100%;
+  width: 0%;
+  content: '';
+  color: white;
+  background: #4B4B4B;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .search_box span:hover::after {
+  width: 100%;
+}
+
+.bgImage {
+  background-image: url(../image/index.png);
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+  margin-bottom: 29px;
+}
+
+.wrapper {
+  margin-top: -70px;
+  margin-left: 30px;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: url("../image/unsplash_6W4F62sN_yI.png");
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.wrapper .my_file {
+  position: absolute;
+  bottom: 0;
+  outline: none;
+  color: transparent;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 30px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .my_file::before {
+  font-size: 50px;
+  color: white;
+  display: inline-block;
+}
+
+.wrapper .my_file::after {
+  content: 'Update';
+  font-weight: bold;
+  display: block;
+  top: 70px;
+  font-size: 14px;
+  position: absolute;
+}
+
+.vedorname {
+  margin-left: 200px;
+  margin-top: -70px;
+}
+
+.navmid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 30px;
+}
+
+.navmid ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0px;
+}
+
+.navmid ol li {
+  margin: 0 2px;
+}
+
+.navmid ol li a {
+  color: #4B4B4B;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+}
+
+.navmid .active {
+  background: #4B4B4B;
+  color: white;
+}
+
+.members-list {
+  margin-top: 60px;
+}
+
+.members-list .heading {
+  font-size: 24px;
+}
+
+.members-list .members {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 36px;
+          column-gap: 36px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 36px;
+}
+
+.members-list .members .add-member {
+  text-decoration: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  width: 260px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 20px rgba(237, 237, 237, 0.25);
+          box-shadow: 0px 10px 20px rgba(237, 237, 237, 0.25);
+  border-radius: 10px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.members-list .members .add-member .icon {
+  padding: 18px;
+  background: #4B4B4B;
+  border-radius: 4px;
+}
+
+.members-list .members .add-member .icon svg {
+  height: 30px;
+  width: 30px;
+}
+
+.members-list .members .add-member .icon .str {
+  stroke: grey;
+}
+
+.members-list .members .add-member .text {
+  font-size: 18px;
+  color: grey;
+}
+
+.members-list .members .add-member:hover {
+  -webkit-box-shadow: 0px 14px 28px rgba(191, 191, 191, 0.25);
+          box-shadow: 0px 14px 28px rgba(191, 191, 191, 0.25);
+}
+
+.members-list .members .member {
+  text-decoration: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  width: 260px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 20px rgba(237, 237, 237, 0.25);
+          box-shadow: 0px 10px 20px rgba(237, 237, 237, 0.25);
+  border-radius: 10px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.members-list .members .member .photo {
+  width: 66px;
+  height: 66px;
+  border-radius: 4px;
+}
+
+.members-list .members .member .photo img {
+  width: 66px;
+  height: 66px;
+  border-radius: 4px;
+}
+
+.members-list .members .member .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.members-list .members .member .about .name {
+  font-size: 18px;
+  color: black;
+}
+
+.members-list .members .member .about .tag {
+  font-size: 14px;
+  color: #222222;
+  padding: 3px 12px;
+  background: #f0ff98;
+  border-radius: 10px;
+}
+
+.members-list .members .member:hover {
+  -webkit-box-shadow: 0px 14px 28px rgba(191, 191, 191, 0.25);
+          box-shadow: 0px 14px 28px rgba(191, 191, 191, 0.25);
+}
+/*# sourceMappingURL=stylevendor.css.map */
