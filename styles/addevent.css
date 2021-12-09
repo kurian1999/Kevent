@@ -24,7 +24,7 @@
 }
 
 .containe {
-  background-image: url("../image/bunch-flowers-leaves-table.png");
+  background-image: url("../image/vendor_bg.png");
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -37,6 +37,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-attachment: fixed;
 }
 
 .containe .login-form {
@@ -51,6 +52,8 @@
           box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
   padding: 40px 60px;
   width: auto important;
+  height: auto !important;
+  margin-top: 20%;
 }
 
 .containe .logo {
@@ -79,6 +82,27 @@
   text-align: center;
 }
 
+.error {
+  color: red;
+}
+
+.error-visible {
+  visibility: visible;
+}
+
+.error-hidden {
+  visibility: hidden;
+}
+
+.disabled {
+  opacity: 40%;
+  pointer-events: none;
+}
+
+.cursor-disable {
+  cursor: not-allowed;
+}
+
 .flex-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +115,8 @@
 }
 
 .flex-input input[type="text"],
-.flex-input [type="password"] {
+.flex-input [type="password"], .flex-input [type="number"], .flex-input [type="date"] {
+  padding: 0px 14px;
   width: 100%;
   height: 53px;
   font-size: 18px;

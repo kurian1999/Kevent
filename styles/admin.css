@@ -7,7 +7,7 @@
 
 .sidebar {
   position: fixed;
-  left: -250px;
+  left: 0px;
   width: 250px;
   height: 100%;
   background: #141731;
@@ -137,4 +137,27 @@ table {
   text-align: center;
   padding-top: 60px;
 }
+
+.buttonn {
+  background: #3498db;
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+
+.buttonn p {
+  font-family: 'Roboto';
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.buttonn:hover {
+  cursor: pointer;
+}
+
+/* */
 /*# sourceMappingURL=admin.css.map */

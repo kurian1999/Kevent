@@ -54,6 +54,44 @@ $primarycolor: #9a2500;
     text-align: center;
   }
 }
+.flex-input-email{
+   display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  @include input(100%);
+}
+.flex-input-name{
+     display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  @include input(100%);
+}
+.flex-input-password{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  @include input(100%);
+}
+
+.error{
+  color:red;
+}
+//Error Visibility
+.error-visible {
+  visibility: visible;
+}
+.error-hidden {
+  visibility: hidden;
+}
+
+	//Disabled Button Style
+.disabled {
+  opacity: 40%;
+  pointer-events: none;
+}
+.cursor-disable {
+  cursor: not-allowed;
+}
 
 .flex-input {
   display: flex;

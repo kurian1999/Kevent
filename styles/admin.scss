@@ -6,7 +6,7 @@
 }
 .sidebar{
     position: fixed;
-    left: -250px;
+    left: 0px;
     width: 250px;
     height: 100%;
     background:#141731;
@@ -121,3 +121,24 @@ table{
     text-align: center;
      padding-top: 60px;
 }
+
+.buttonn {
+  background: #3498db;
+  padding: 2px 10px;
+  border-radius: 3px;
+
+  p {
+   	font-family: 'Roboto'; 
+	  text-align: center;
+  	text-transform: uppercase;
+    color: #FFF;
+    user-select: none;
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+/* */

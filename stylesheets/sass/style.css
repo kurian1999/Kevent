@@ -245,6 +245,18 @@
   border: 3px solid #9A2500;
 }
 
+.main .lg-container .right-lg-container .form-container .error {
+  color: red;
+}
+
+.main .lg-container .right-lg-container .form-container .error-visible {
+  visibility: visible;
+}
+
+.main .lg-container .right-lg-container .form-container .error-hidden {
+  visibility: hidden;
+}
+
 .main .lg-container .right-lg-container .form-container .form-min-group {
   width: 100%;
   display: -webkit-box;

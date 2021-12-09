@@ -78,6 +78,132 @@
   text-align: center;
 }
 
+.flex-input-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.flex-input-email input[type="text"],
+.flex-input-email [type="password"], .flex-input-email [type="number"], .flex-input-email [type="date"] {
+  padding: 0px 14px;
+  width: 100%;
+  height: 53px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  accent-color: #9a2500;
+}
+
+.flex-input-email input[type="radio"] {
+  accent-color: #9a2500;
+}
+
+.flex-input-email label {
+  width: 83px;
+  height: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.flex-input-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.flex-input-name input[type="text"],
+.flex-input-name [type="password"], .flex-input-name [type="number"], .flex-input-name [type="date"] {
+  padding: 0px 14px;
+  width: 100%;
+  height: 53px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  accent-color: #9a2500;
+}
+
+.flex-input-name input[type="radio"] {
+  accent-color: #9a2500;
+}
+
+.flex-input-name label {
+  width: 83px;
+  height: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.flex-input-password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.flex-input-password input[type="text"],
+.flex-input-password [type="password"], .flex-input-password [type="number"], .flex-input-password [type="date"] {
+  padding: 0px 14px;
+  width: 100%;
+  height: 53px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  accent-color: #9a2500;
+}
+
+.flex-input-password input[type="radio"] {
+  accent-color: #9a2500;
+}
+
+.flex-input-password label {
+  width: 83px;
+  height: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+}
+
+.error-visible {
+  visibility: visible;
+}
+
+.error-hidden {
+  visibility: hidden;
+}
+
+.disabled {
+  opacity: 40%;
+  pointer-events: none;
+}
+
+.cursor-disable {
+  cursor: not-allowed;
+}
+
 .flex-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,7 +216,8 @@
 }
 
 .flex-input input[type="text"],
-.flex-input [type="password"] {
+.flex-input [type="password"], .flex-input [type="number"], .flex-input [type="date"] {
+  padding: 0px 14px;
   width: 100%;
   height: 53px;
   font-size: 18px;

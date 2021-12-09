@@ -1,3 +1,13 @@
+<?php
+include "./include/condb.php";
+session_start();
+$uname = $_SESSION['login_user'];
+if (isset($_SESSION["sessionID"]) != session_id()) {
+    header("Location: ./index.php");
+    die();
+} else {
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,41 +22,65 @@
 
 <body>
     <div class="containe">
-        <form action="" class="login-form" method="post">
-            <div class="flex-input">
-                <label for="">Event name</label>
-                <input type="text" name="ename" id="" autocomplete="off">
+        <form action="eventdb.php" class="login-form" method="post" name="myform" id="reg-form">
+            <div class="flex-input evname">
+                <label for="">Event_name</label>
+                <input type="text" name="ename" id="ename-id" autocomplete="off">
+                <div class="error error-hidden">
+
+                </div>
             </div>
-            <div class="flex-input">
+            <div class="flex-input evtype">
                 <label for="">Event Type</label>
-                <input type="text" name="etype" id="" autocomplete="off">
+                <input type="text" name="etype" id="etype-id" autocomplete="off">
+                <div class="error error-hidden">
+
+                </div>
             </div>
-            <div class="flex-input">
+            <div class="flex-input evdes">
                 <label for="">Description</label>
-                <input type="text" name="etype" id="" autocomplete="off">
+                <input type="text" name="edes" id="edes-id" autocomplete="off">
+                <div class="error error-hidden">
+
+                </div>
             </div>
-            <div class="flex-input">
+            <div class="flex-input evcap">
                 <label for="">Capacity</label>
-                <input type="number" name="etype" id="" autocomplete="off">
+                <input type="number" name="ecap" id="ecap-id" autocomplete="off">
+                <div class="error error-hidden">
+
+                </div>
             </div>
-            <div class="flex-input">
+            <div class="flex-input evprice">
                 <label for="">Price</label>
-                <input type="number" name="etype" id="" autocomplete="off">
+                <input type="number" name="eprice" id="eprice-id" autocomplete="off">
+                <div class="error error-hidden">
+
+                </div>
             </div>
-            <div class="flex-input">
+            <div class="flex-input evdura">
                 <label for="">Duration</label>
-                <input type="number" name="etype" id="" autocomplete="off">
+                <input type="number" name="edura" id="edura-id" autocomplete="off">
+                <div class="error error-hidden">
+
+                </div>
             </div>
-            <div class="flex-input">
+            <div class="flex-input evdate">
                 <label for="">Event Date</label>
-                <input type="date" name="edate" id="" autocomplete="off">
+                <input type="date" name="edate" id="edate-id" autocomplete="off">
+                <div class="error error-hidden">
+
+                </div>
             </div>
-            <div class="flex-input">
-                <input type="submit" class="prbtn" value="login" name="lgbtn">
+            <div class="flex-input button cursor-disable">
+                <input type="submit" class="prbtn disabled" value="ADD" name="lvbtn" id="reg-btn">
             </div>
+
+
         </form>
     </div>
-
+    <script src="./js/adevent.js"></script>
 </body>
 
 </html>
+<?php } ?>

@@ -19,18 +19,21 @@ $primarycolor: #9a2500;
   }
 }
 .containe {
-  background-image: url("../image/bunch-flowers-leaves-table.png");
+  background-image: url("../image/vendor_bg.png");
   background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
   
   .login-form {
     @include formblur(0px 0px 30px 30px, 100vh);
     padding:40px 60px;
     width:auto important;
+    height: auto !important;
+    margin-top: 20%;
   }
   .logo {
     width: 253px;
@@ -56,7 +59,25 @@ $primarycolor: #9a2500;
     text-align: center;
   }
 }
+.error{
+  color:red;
+}
+//Error Visibility
+.error-visible {
+  visibility: visible;
+}
+.error-hidden {
+  visibility: hidden;
+}
 
+	//Disabled Button Style
+.disabled {
+  opacity: 40%;
+  pointer-events: none;
+}
+.cursor-disable {
+  cursor: not-allowed;
+}
 .flex-input {
   display: flex;
   flex-direction: column;

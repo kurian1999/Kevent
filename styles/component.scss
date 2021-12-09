@@ -23,7 +23,9 @@ $secondary-hover-color: #c7d8fc;
 
 @mixin input($width) {
   input[type="text"],
-  [type="password"] {
+  [type="password"] ,[type="number"],[type="date"]
+  {
+    padding: 0px 14px;
     width: $width;
     height: 53px;
     font-size: 18px;

@@ -178,6 +178,17 @@
           
           
         }
+        .error{
+          color:red;
+              }
+              //Error Visibility
+        .error-visible {
+         visibility: visible;
+         }
+.error-hidden {
+  visibility: hidden;
+}
+
         .form-min-group{
           width: 100%;
           display: flex;

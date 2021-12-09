@@ -1,3 +1,13 @@
+<?php
+include "./include/condb.php";
+session_start();
+$uname=$_SESSION['login_user'];
+if (isset($_SESSION["sessionID"]) != session_id()) {
+    header("Location: ./index.php");
+    die();
+} else {
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +31,9 @@
             <li><a href="">Service</a></li>
             <li><a href="">Category</a></li>
             <li><a href="">About</a></li>
+            <li><a href="./logout.php">Logout</a></li>
             <li><a href=""><img src="#"></a></li>
+        </ol>
 
     </nav>
     <div class="bgImage">
@@ -31,9 +43,26 @@
         <input type="file" class="my_file">
 
     </div>
+
+
+
     <div class="vedorname">
-        <h2>Company name</h2>
+        <?php
+        $uname=$_SESSION['login_user'];
+        $sql="SELECT `company_name` FROM `tbl_vendor_details` WHERE `username`= '$uname'";
+        $result=mysqli_query($conn,$sql);
+        $resultcheck=mysqli_num_rows($result);
+        if($resultcheck>0){
+            while($row=mysqli_fetch_assoc($result)){
+                
+                echo "<h2>".$row['company_name']."</h2>";
+            }
+        }
+        ?>
+
+
     </div>
+
     <div class="navmid">
         <ol>
             <li><a href="" class="active">Events</a></li>
@@ -134,3 +163,6 @@
 </body>
 
 </html>
+<?php
+}
+?>
