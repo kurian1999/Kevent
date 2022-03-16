@@ -67,13 +67,13 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
             </div>
             <div class="flex-input evdate">
                 <label for="">Event Date</label>
-                <input type="date" name="edate" id="edate-id" autocomplete="off">
+                <input type="date" name="edate" id="edate-id" autocomplete="off">  
                 <div class="error error-hidden">
 
                 </div>
             </div>
-            <div class="flex-input button cursor-disable">
-                <input type="submit" class="prbtn disabled" value="ADD" name="lvbtn" id="reg-btn">
+            <div class="flex-input button ">
+                <input type="submit" class="prbtn " value="ADD" name="lvbtn" id="reg-btn">
             </div>
 
 

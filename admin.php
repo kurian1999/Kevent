@@ -76,7 +76,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                 while ($row = mysqli_fetch_assoc($result)) {
             ?>
                     <tr>
-                        <td><?php echo $row["rid"]; ?></td>
+                        <!-- <td><?php echo $row["rid"]; ?></td> -->
                         <td><?php echo $row["email"]; ?></td>
                         <td><?php echo $row["User_type_id"]; ?></td>
                         <td><?php echo $row["name"]; ?></td>

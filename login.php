@@ -55,16 +55,13 @@
                 </div>
             </div>
             <div class="flex-container">
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <span>Remember me</span>
-                </div>
-                <div>
+                
+                <!-- <div>
                     <a href="#">Forget Password?</a>
-                </div>
+                </div> -->
             </div>
             <div class="flex-input">
-                <input type="submit" class="prbtn" value="login" name="lgbtn" onclick="validate_email()">
+                <input type="submit" class="prbtn" value="login" name="lgbtn" >
 
             </div>
             <div class="or">

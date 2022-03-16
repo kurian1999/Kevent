@@ -28,6 +28,7 @@ var EveDateSubmit = false;
 //Event name Validation
 var nameChk = /^[a-z A-Z]+$/;
 evename.addEventListener("input", () => {
+    console.log("hello");
     if (evename.value.match(nameChk)) {
         EveNameError.classList.add("error-hidden");
         EveNameError.classList.remove("error-visible");
@@ -84,12 +85,12 @@ evedes.addEventListener("input", () => {
 //Event capacity validation
 var numChk = /^\d*(\.\d+)?$/;
 evecap.addEventListener("input", () => {
-  if (evecap.value == "") {
+    if (evecap.value == "") {
         EveCapError.classList.add("error-visible");
         EveCapError.classList.remove("error-hidden");
         EveCapError.innerText = "Field cannot be blank";
         EveCapsubmit = false;
-    } 
+    }
 });
 
 //Event price validation
@@ -99,7 +100,7 @@ eveprice.addEventListener("input", () => {
         EvePriceError.classList.remove("error-hidden");
         EvePriceError.innerText = "Field cannot be blank";
         EvePriceSubmit = false;
-    } 
+    }
 });
 //duration validation
 // var timeChk = /^(2[0-3]|[0-1]?[\d]):[0-5][\d]:[0-5][\d]$/;
@@ -109,7 +110,12 @@ evedura.addEventListener("input", () => {
         EveDuraError.classList.remove("error-hidden");
         EveDuraError.innerText = "Field cannot be blank";
         EveDuraSubmit = false;
-    } 
+    } else if (evedura.value !== "") {
+        EveDuraError.classList.remove("error-visible");
+        EveDuraError.classList.add("error-hidden");
+        EveDuraError.innerText = "";
+        EveDuraSubmit = false;
+    }
 });
 
 //date vaildation
@@ -127,20 +133,35 @@ evedate.addEventListener("input", () => {
     } else {
         EveDateError.classList.add("error-visible");
         EveDateError.classList.remove("error-hidden");
-        EveDateError.innerText = "Name should not contain numbers";
+        EveDateError.innerText = "";
         EveDateSubmit = false;
     }
 });
 
+const wDatePicker = document.querySelector("#edate-id");
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0 so need to add 1 to make it 1!
+var yyyy = today.getFullYear();
+if (dd < 10) {
+    dd = '0' + dd
+}
+if (mm < 10) {
+    mm = '0' + mm
+}
 
-const buttonCursor = document.querySelector(".button");//To avoid poniterevent and cursor problem
-regForm.addEventListener("keyup", () => {
-    console.log(EveNameSubmit);
-    if (EveNameSubmit == true && EveTypeSubmit == true && EveDessubmit == true && EveCapsubmit == true && EvePriceSubmit == true && EveDuraSubmit == true && EveDateSubmit == true) {
-        regSubBtn.classList.remove("disabled");
-        buttonCursor.classList.remove("cursor-disabled");
-    } else {
-        regSubBtn.classList.add("disabled");
-        buttonCursor.classList.add("cursor-disabled");
-    }
-});
+today = yyyy + '-' + mm + '-' + dd;
+wDatePicker.setAttribute("min", today);
+
+
+// const buttonCursor = document.querySelector(".button");//To avoid poniterevent and cursor problem
+// regForm.addEventListener("keyup", () => {
+//     console.log(EveNameSubmit);
+//     if (EveNameSubmit == true && EveTypeSubmit == true && EveDessubmit == true && EveCapsubmit == true && EvePriceSubmit == true && EveDuraSubmit == true && EveDateSubmit == true) {
+//         regSubBtn.classList.remove("disabled");
+//         buttonCursor.classList.remove("cursor-disabled");
+//     } else {
+//         regSubBtn.classList.add("disabled");
+//         buttonCursor.classList.add("cursor-disabled");
+//     }
+// });

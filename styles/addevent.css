@@ -94,15 +94,6 @@
   visibility: hidden;
 }
 
-.disabled {
-  opacity: 40%;
-  pointer-events: none;
-}
-
-.cursor-disable {
-  cursor: not-allowed;
-}
-
 .flex-input {
   display: -webkit-box;
   display: -ms-flexbox;

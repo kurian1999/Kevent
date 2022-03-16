@@ -51,7 +51,14 @@ phoneno.addEventListener("input", () => {
         PhonenoError.classList.remove("error-hidden");
         PhonenoError.innerText = "Field cannot be blank";
 
-    } else {
+    }
+     else if (phoneno.value !== "") {
+        PhonenoError.classList.remove("error-visible");
+        PhonenoError.classList.add("error-hidden");
+        PhonenoError.innerText = "";
+
+    } 
+    else {
         PhonenoError.classList.add("error-visible");
         PhonenoError.classList.remove("error-hidden");
         PhonenoError.innerText = "Invalid number";
@@ -71,10 +78,17 @@ city.addEventListener("input", () => {
         CitynameError.classList.remove("error-hidden");
         CitynameError.innerText = "Field cannot be blank";
 
-    } else {
+    }
+    else if (city.value !== "") {
+        CitynameError.classList.remove("error-visible");
+        CitynameError.classList.add("error-hidden");
+        CitynameError.innerText = "";
+
+    } 
+    else {
         CitynameError.classList.add("error-visible");
         CitynameError.classList.remove("error-hidden");
-        CitynameError.innerText = "Name should not contain number";
+        CitynameError.innerText = "invalid city";
 
     }
 });
@@ -90,10 +104,17 @@ state.addEventListener("input", () => {
         StateError.classList.remove("error-hidden");
         StateError.innerText = "Field cannot be blank";
 
-    } else {
+    }
+    else if (state.value !== "") {
+        StateError.classList.remove("error-visible");
+        StateError.classList.add("error-hidden");
+        StateError.innerText = "";
+
+    } 
+    else {
         StateError.classList.add("error-visible");
         StateError.classList.remove("error-hidden");
-        StateError.innerText = "Name should not contain number";
+        StateError.innerText = "invalid state";
 
     }
 });
@@ -110,10 +131,17 @@ pincode.addEventListener("input", () => {
         PincodeError.classList.remove("error-hidden");
         PincodeError.innerText = "Field cannot be blank";
 
-    } else {
+    }
+    else if (pincode.value !== "") {
+        PincodeError.classList.remove("error-visible");
+        PincodeError.classList.add("error-hidden");
+        PincodeError.innerText = "";
+
+    } 
+    else {
         PincodeError.classList.add("error-visible");
         PincodeError.classList.remove("error-hidden");
-        PincodeError.innerText = "Name should not contain number";
+        PincodeError.innerText = " invalid pincode";
 
     }
 });
@@ -131,7 +159,14 @@ Tinno.addEventListener("input", () => {
         TinnoError.classList.remove("error-hidden");
         TinnoError.innerText = "Field cannot be blank";
 
-    } else {
+    }
+    else if (Tinno.value !== "") {
+        TinnoError.classList.remove("error-visible");
+        TinnoError.classList.add("error-hidden");
+        TinnoError.innerText = "";
+
+    }  
+    else {
         TinnoError.classList.add("error-visible");
         TinnoError.classList.remove("error-hidden");
         TinnoError.innerText = "Name should not contain character";
@@ -150,10 +185,17 @@ Vatno.addEventListener("input", () => {
         VatnoError.classList.remove("error-hidden");
         VatnoError.innerText = "Field cannot be blank";
 
-    } else {
+    }
+    else if (Vatno.value !== "") {
+        VatnoError.classList.remove("error-visible");
+        VatnoError.classList.add("error-hidden");
+        VatnoError.innerText = "";
+
+    }  
+    else {
         VatnoError.classList.add("error-visible");
         VatnoError.classList.remove("error-hidden");
-        VatnoError.innerText = "Name should not contain character";
+        VatnoError.innerText = "invalid validno";
 
     }
 });
@@ -170,7 +212,14 @@ Serno.addEventListener("input", () => {
         SernoError.classList.remove("error-hidden");
         SernoError.innerText = "Field cannot be blank";
 
-    } else {
+    }
+    else if (Serno.value !== "") {
+        SernoError.classList.remove("error-visible");
+        SernoError.classList.add("error-hidden");
+        SernoError.innerText = "";
+
+    } 
+    else {
         SernoError.classList.add("error-visible");
         SernoError.classList.remove("error-hidden");
         SernoError.innerText = "Name should not contain character";
