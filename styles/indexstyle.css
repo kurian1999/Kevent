@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -156,6 +160,14 @@ body {
           transform: scale(1);
 }
 
+.main a {
+  text-decoration: none;
+}
+
+.main a:hover {
+  text-decoration: none;
+}
+
 .main .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,6 +275,24 @@ body {
   padding: 0 70px;
 }
 
+.main .pagethem-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  margin-top: 50px;
+  padding: 0 70px;
+}
+
+.main .pagebat-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  margin-top: 50px;
+  padding: 0 70px;
+}
+
 .main .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,6 +340,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
+  color: black;
 }
 
 .main .cards .card .content .sec1 .tag {

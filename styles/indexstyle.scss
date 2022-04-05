@@ -63,6 +63,12 @@ body {
       }
     }
   }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
   .hero {
     display: flex;
     align-items: center;
@@ -204,7 +210,22 @@ body {
     line-height: 36px;
     padding: 0 70px;
   }
-
+  .pagethem-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 50px;
+    padding: 0 70px;
+  }
+  .pagebat-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 50px;
+    padding: 0 70px;
+  }
   .cards {
     display: flex;
     column-gap: 20px;
@@ -233,6 +254,7 @@ body {
             font-style: normal;
             font-weight: 500;
             font-size: 18px;
+            color: black;
           }
           .tag {
             font-style: normal;
