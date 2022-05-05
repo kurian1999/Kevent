@@ -3,13 +3,14 @@ include "./include/condb.php";
 session_start();
 $uname = $_SESSION['login_user'];
 if (isset($_SESSION["sessionID"]) != session_id()) {
-    header("Location: ./index.php");
-    die();
+  header("Location: ./index.php");
+  die();
 } else {
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,10 +31,10 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
           <a href="./index.php"><img src="./image/logo.svg" alt="logo" /></a>
         </div>
         <div class="links">
-          <a href="./vendorprofile.php" class="link">Home</a>
+          <a href="./index.php" class="link">Home</a>
 
           <a href="" class="link">About</a>
-          <a href="" class="link">contact us</a>
+          <a href="" class="link">Contact us</a>
           <a href="./logout.php" class="link">Logout</a>
         </div>
       </div>
@@ -41,56 +42,27 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
         <div class="title">Add Package</div>
 
         <!-- Add package -->
-        <form
-          action="./addpackage.php"
-          method="post"
-          id="add-house-member"
-          enctype="multipart/form-data"
-        >
+        <form action="./addpackage.php" method="post" id="add-house-member" enctype="multipart/form-data">
           <input type="hidden" name="fname" value="<?php echo $fname ?>" />
           <div class="inputs">
             <div class="input h-fullname">
               <div class="label">Package_Name</div>
-              <input
-                type="text"
-                name="hfname"
-                id="h-full-name"
-                placeholder=""
-                autocomplete="off"
-              />
+              <input type="text" name="hfname" id="h-full-name" placeholder="" autocomplete="off" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-email">
               <div class="label">Category</div>
-              <input
-                type="text"
-                name="hemail"
-                id="h-email-id"
-                placeholder="tradition"
-                autocomplete="off"
-              />
+              <input type="text" name="hemail" id="h-email-id" placeholder="tradition" autocomplete="off" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-phno">
               <div class="label">Rate</div>
-              <input
-                type="text"
-                name="hphno"
-                id="h-phn-number"
-                placeholder="2500$"
-                autocomplete="off"
-              />
+              <input type="text" name="hphno" id="h-phn-number" placeholder="2500$" autocomplete="off" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-phno">
               <div class="label">Capacity</div>
-              <input
-                type="text"
-                name="hcapa"
-                id="h-phn-number"
-                placeholder="max"
-                autocomplete="off"
-              />
+              <input type="text" name="hcapa" id="h-phn-number" placeholder="max" autocomplete="off" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-about">
@@ -100,69 +72,41 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
             </div>
             <div class="input h-photo">
               <div class="label">Upload photo-1</div>
-              <input
-                type="file"
-                name="hphoto_1"
-                id="h-photo"
-                accept="image/png,image/jpeg"
-              />
+              <input type="file" name="hphoto_1" id="h-photo" accept="image/png,image/jpeg" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-photo">
               <div class="label">Upload photo-2</div>
-              <input
-                type="file"
-                name="hphoto_2"
-                id="h-photo"
-                accept="image/png,image/jpeg"
-              />
+              <input type="file" name="hphoto_2" id="h-photo" accept="image/png,image/jpeg" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-photo">
               <div class="label">Upload photo-3</div>
-              <input
-                type="file"
-                name="hphoto_3"
-                id="h-photo"
-                accept="image/png,image/jpeg"
-              />
+              <input type="file" name="hphoto_3" id="h-photo" accept="image/png,image/jpeg" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-photo">
               <div class="label">Upload photo-4</div>
-              <input
-                type="file"
-                name="hphoto_4"
-                id="h-photo"
-                accept="image/png,image/jpeg"
-              />
+              <input type="file" name="hphoto_4" id="h-photo" accept="image/png,image/jpeg" />
               <div class="error error-hidden"></div>
             </div>
             <div class="input h-photo">
               <div class="label">Upload photo-5</div>
-              <input
-                type="file"
-                name="hphoto_5"
-                id="h-photo"
-                accept="image/png,image/jpeg"
-              />
+              <input type="file" name="hphoto_5" id="h-photo" accept="image/png,image/jpeg" />
               <div class="error error-hidden"></div>
             </div>
             <div class="button hBtn cursor">
-              <input
-                type="submit"
-                value="Add Package"
-                name="add-hm"
-                id="add-hm"
-                class="primary-button"
-              />
+              <input type="submit" value="Add Package" name="add-hm" id="add-hm" class="primary-button" />
             </div>
           </div>
         </form>
       </div>
     </div>
   </body>
-</html>
+
+  </html>
 <?php
+
+
 }
 ?>

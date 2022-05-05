@@ -26,11 +26,11 @@
           <a href="./index.php"><img src="./image/logo.svg" alt="logo" /></a>
         </div>
         <div class="links">
-          <a href="./vendorprofile.php" class="link">Vendors</a>
+          <a href="./vendorhome.php" class="link">Vendors</a>
 
           <a href="" class="link">About</a>
           <a href="" class="link">contact us</a>
-          <a href="./login.php" class="link">Log in</a>
+          <a href="./logout.php" class="link">Log out</a>
           <!-- <a href="./assets/pages/login.php" class="link login-btn">login</a> -->
         </div>
       </div>
@@ -54,7 +54,7 @@
 
       <div class="cards">
         <!-- card -->
-        <a href="./eventproduct.php">
+        <a href="./eventproduct.php?get_id=<?php echo '5'?>">
           <div class="card">
             <div class="card-img">
               <img src="./image/tradition.jpg" alt="" />

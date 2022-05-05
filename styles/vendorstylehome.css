@@ -175,15 +175,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 80px;
-  margin-top: 60px;
+  padding: 0 226px;
+  margin-top: 90px;
 }
 
 .main .hero .content {
-  width: 50vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,16 +239,9 @@ body {
 }
 
 .main .hero .hero-img {
-  width: 50vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .main .hero .hero-img img {
@@ -308,6 +300,9 @@ body {
   -webkit-column-gap: 20px;
           column-gap: 20px;
   margin: 20px 70px 54px 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 26px;
 }
 
 .main .cards .card {
@@ -402,4 +397,4 @@ body {
   font-size: 16px;
   color: #1e1e1e;
 }
-/*# sourceMappingURL=indexstyle.css.map */
+/*# sourceMappingURL=vendorstylehome.css.map */

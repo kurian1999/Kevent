@@ -333,4 +333,154 @@ nav .search_box span:hover::after {
   -webkit-box-shadow: 0px 14px 28px rgba(191, 191, 191, 0.25);
           box-shadow: 0px 14px 28px rgba(191, 191, 191, 0.25);
 }
+
+.tab-menu {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tab-menu .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+}
+
+.tab-menu .tabs .tab {
+  font-family: "Gilroy_SB";
+  font-size: 20px;
+  color: #4B4B4B;
+  padding: 8px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tab-menu .tabs .tab:hover {
+  color: rebeccapurple;
+}
+
+.tab-menu .tabs .tab-active {
+  color: #fff;
+  background: #4B4B4B;
+  width: auto;
+}
+
+.tab-menu .tabs .tab-active::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: calc(100% + 48px);
+  height: 2px;
+  background: #4B4B4B;
+  top: 22px;
+  left: -24px;
+}
+
+.tab-menu .underline {
+  margin-top: 12px;
+  height: 2px;
+  width: 100%;
+  background: #D9D5F5;
+  border-radius: 4px;
+}
+
+.tab-content {
+  margin-top: 42px;
+  display: none;
+}
+
+.tab-con-active {
+  display: block;
+}
+
+.containe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-attachment: fixed;
+}
+
+.login-form {
+  background: white;
+  width: 42vw;
+  padding: 64px 86px 0 86px;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  -webkit-box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
+  padding: 40px 60px;
+}
+
+.login-form .flex-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 32px;
+  padding: 0px 14px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.login-form .flex-input input[type="text"],
+.login-form .flex-input [type="number"],
+.login-form .flex-input [type="date"] {
+  padding: 0px 14px;
+  width: 100%;
+  height: 53px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  accent-color: #9a2500;
+}
+
+.login-form .flex-input label {
+  width: 83px;
+  height: 24px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.login-form .prbtn {
+  width: 100%;
+  height: 53px;
+  font-weight: 600;
+  background: #9a2500;
+  border-radius: 10px;
+  color: white;
+  border: none;
+}
+
+.login-form .prbtn:hover {
+  cursor: pointer;
+  background-color: #6d1900;
+}
+
+.login-form textarea {
+  padding: 14px;
+  width: 100%;
+  min-height: 120px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-family: Poppins;
+}
 /*# sourceMappingURL=stylevendor.css.map */

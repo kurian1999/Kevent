@@ -73,7 +73,7 @@ pass.addEventListener("input", () => {
 //Submit Button Visibility
 const buttonCursor = document.querySelector(".button");//To avoid poniterevent and cursor problem
 regForm.addEventListener("keyup", () => {
-    console.log(fullNameSubmit);
+    console.log(fullNameSubmit,emailSubmit,passsubmit);
     if (fullNameSubmit == true && emailSubmit == true && passsubmit==true) {
         regSubBtn.classList.remove("disabled");
         buttonCursor.classList.remove("cursor-disabled");

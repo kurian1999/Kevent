@@ -6,7 +6,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
     header("Location: ./index.php");
     die();
 } else {
-    $query = "SELECT * FROM `tbl_product_view` WHERE `category`='Themed parties'";
+    $query = "SELECT * FROM `tbl_vendor_details`";
     $res = mysqli_query($conn, $query);
 
 ?>
@@ -17,9 +17,9 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kevent</title>
+        <title>KEvent</title>
         <link rel="shortcut icon" href="./image/download.png" type="image/x-icon" />
-        <link rel="stylesheet" href="./styles/vendorstylehome.css">
+        <link rel="stylesheet" href="./styles/vendorstylehome.css" />
     </head>
 
     <body>
@@ -32,16 +32,29 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                     <a href="./index.php"><img src="./image/logo.svg" alt="logo" /></a>
                 </div>
                 <div class="links">
-                    <a href="./index.php" class="link">Home</a>
-
+                    <a href="./vendorhome.php" class="link">Home</a>
+                    <a href="./package.php" class="link">Add Package</a>
                     <a href="" class="link">About</a>
-                    <a href="" class="link">contact us</a>
-                    <a href="./logout.php" class="link">Log Out</a>
-                    <!-- <a href="./assets/pages/login.php" class="link login-btn">login</a> -->
+                    <a href="" class="link">Contact us</a>
+                    <a href="./logout.php" class="link">Logout</a>
                 </div>
             </div>
-            <div class="pagethem-title">Themed parties</div>
-
+            <div class="hero">
+                <div class="content">
+                    <div class="heading">
+                        Vendor <span>KEvent</span> Services
+                    </div>
+                    <div class="description">
+                        KEvent is a user-friendly web platform designed to assist various
+                        members.
+                    </div>
+                    <!-- <a href="./login.php" class="cta">Get Started</a> -->
+                </div>
+                <div class="hero-img">
+                    <img src="./image/pexels-secret-garden-2879824.jpg" alt="" />
+                </div>
+            </div>
+            <div class="cat-title">Vendors</div>
             <div class="cards">
                 <!-- card -->
                 <?php
@@ -50,18 +63,18 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                     <form action="#">
                     <div class="card">
                     <div class="card-img">
-                      <a href="./eventproduct.php?get_id=' . $row['rid'] . '"><img src="./uploadimage/' . $row['event_photo_1'] . '" alt="" /></a>
+                        <a href="./vendorprofile.php?get_id=' . $row['vendor_id'] . '"><img src="./image/tradition.jpg" alt="" /></a>
                     </div>
                     <div class="content">
                         <div class="sec1">
-                            <div class="title">' . $row['event_package'] . '</div>
-                            <div class="tag">' . $row['category'] . '</div>
+                            <div class="title">' . $row['company_name'] . '</div>
+                            <div class="tag">' . $row['type'] . '</div>
                         </div>
                         <div class="hr"></div>
                         <div class="sec2">
                             <div class="detail">
-                                <div class="a">Rate:</div>
-                                <div class="b">' . $row['price'] . '</div>
+                                <div class="a">Detail:</div>
+                                <div class="b">Group of event </div>
                             </div>
                             <div class="detail">
                                 <div class="a"></div>
@@ -75,6 +88,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                 }
                 ?>
             </div>
+        </div>
     </body>
 
     </html>

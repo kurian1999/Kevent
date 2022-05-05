@@ -1,3 +1,4 @@
+@import "./component.scss";
 *{
     margin: 0px;
     padding: 0px;
@@ -101,7 +102,7 @@ nav{
     height: 150px;
     width: 150px;
     position: relative;
-    border: 5px solid#fff;
+    border: 5px solid #fff;
     border-radius: 50%;
     background: url('../image/unsplash_6W4F62sN_yI.png');
     background-size: 100% 100%;
@@ -272,3 +273,128 @@ nav{
       }
     }
   
+.tab-menu {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+
+  .tabs {
+    display: flex;
+    column-gap: 24px;
+
+    .tab {
+      font-family: "Gilroy_SB";
+      font-size: 20px;
+      color: #4B4B4B;
+      padding: 8px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color:rebeccapurple;
+      }
+    }
+
+    .tab-active {
+      color: #fff;
+      background: #4B4B4B;
+      width: auto;
+
+      &::after {
+        content: "";
+        position: relative;
+        display: block;
+        width: calc(100% + 48px);
+        height: 2px;
+        background: #4B4B4B;
+        top: 22px;
+        left: -24px;
+      }
+    }
+  }
+
+  .underline {
+    margin-top: 12px;
+    height: 2px;
+    width: 100%;
+    background: #D9D5F5;
+    border-radius: 4px;
+  }
+}
+
+//Tab content
+.tab-content {
+  margin-top: 42px;
+  display: none;
+}
+
+.tab-con-active {
+  display: block;
+}
+
+
+.containe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+  .login-form {
+    background:rgb(255, 255, 255);
+    width: 42vw;
+    padding: 64px 86px 0 86px;
+    border-radius: 12px;
+    backdrop-filter: blur(25px);
+    box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
+    padding: 40px 60px;
+    // width: auto important;
+    // height: auto !important;
+    .flex-input {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+      padding: 0px 14px;
+      font-size: 18px;
+      border-radius: 10px;
+    
+      input[type="text"],
+      [type="number"],
+      [type="date"] {
+        padding: 0px 14px;
+        width: 100%;
+        height: 53px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        accent-color: $primarycolor;
+      }
+    
+      label {
+        width: 83px;
+        height: 24px;
+    
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+      }
+    }
+    
+    .prbtn {
+      @include primary-btn(100%);
+    }
+    
+    .prbtn:hover {
+      cursor: pointer;
+      background-color: #6d1900;
+    }
+    
+    textarea {
+      padding: 14px;
+      width: 100%;
+      min-height: 120px;
+      font-size: 18px;
+      border-radius: 10px;
+      font-family: Poppins;
+    }
+  }

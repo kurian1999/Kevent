@@ -287,4 +287,31 @@ img {
 .product-details ul li span {
   font-weight: 400;
 }
+
+.cta {
+  position: absolute;
+  width: 230px;
+  right: 142px;
+  background: #fff;
+  color: #5744e3;
+  font-family: "Gilroy_SB";
+  font-size: 20px;
+  padding: 16px 56px;
+  border: 2px solid #5744e3;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.cta:hover {
+  background: #5744e3;
+  color: #fff;
+}
+
+.cta:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
 /*# sourceMappingURL=styleevent.css.map */

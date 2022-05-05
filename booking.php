@@ -47,7 +47,7 @@ $sql = mysqli_query($conn, "SELECT  `company_name`FROM `tbl_vendor_details`");
 
         </ul>
     </div>
-    <div class="containe">
+    <di-v class="containe">
         <form action="register.php" class="login-form" name="myform" method="post" id="my_form">
             <div class="logo">
                 <img src="./image/Group 2.png" alt="" srcset="">

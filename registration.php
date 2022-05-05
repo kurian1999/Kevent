@@ -67,8 +67,8 @@ include "./include/condb.php";
                 </div>
             </div>
 
-            <div class="flex-input button cursor-disable">
-                <input type="submit" class="prbtn disabled" value="Register" name="regbtn" id="reg-btn">
+            <div class="flex-input button ">
+                <input type="submit" class="prbtn " value="Register" name="regbtn" id="reg-btn">
             </div>
 
             <div class="sub-title">
@@ -76,8 +76,8 @@ include "./include/condb.php";
             </div>
 
 
-
-            <script src="./js/reg.js">
+            <script src="./js/reg.js"></script>
+            <script>
                 // function validate_pass() {
                 //     var password = document.myform.pass.value;
                 //     var pname = document.forms["myform"]["pass"];

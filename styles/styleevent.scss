@@ -155,6 +155,30 @@ img {
 .product-details ul li span {
   font-weight: 400;
 }
+.cta {
+  position: absolute;
+  width: 230px;
+  right:142px;
+  background: #fff;
+  color: $primary;
+  font-family: "Gilroy_SB";
+  font-size: 20px;
+  padding: 16px 56px;
+  border: 2px solid $primary;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
 // .card {
 //   display: grid;
 //   grid-template-columns: repeat(2, 1fr);
