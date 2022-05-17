@@ -7,6 +7,13 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
     die();
 } else {
     $book_id = $_GET['get_id'];
+    $userid =  $_SESSION['u_id'];
+    $sqlid = "SELECT * FROM `tbl_product_view` WHERE `rid`='$book_id'";
+    $res = mysqli_query($conn, $sqlid);
+    $rescheck = mysqli_num_rows($res);
+    $roww = mysqli_fetch_array($res);
+    $vendorid = $roww['vid'];
+
 
 ?>
     <!DOCTYPE html>
@@ -50,7 +57,8 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                                 $row = mysqli_fetch_array($result);
                                 $eventname = $row['event_package'];
                                 $eventtype = $row['category'];
-                                $eventprice = $row['price']
+                                $eventprice = $_SESSION['price'] = $row['price']
+
                                 ?>
                             </div>
                             <!-- 1st container -->
@@ -59,6 +67,9 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                                     <div class="form-label-flex">
                                         <label for="pin">Today's Date: <sup>*</sup></label>
                                         <input type="date" name="todate" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                                        <input type="hidden" name="getId" value="<?php echo $book_id; ?>">
+                                        <input type="hidden" name="userid" value="<?php echo $userid; ?>">
+                                        <input type="hidden" name="vendorid" value="<?php echo $vendorid; ?>">
                                         <div class="error error-hidden"></div>
                                     </div>
                                 </div>
@@ -130,6 +141,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                                     <div class="form-label-flex zipna">
                                         <label for="pin">Pincode <sup>*</sup></label>
                                         <input type="text" name="zip" id="zipid" class="form-min-control" placeholder="686008" autocomplete="off" />
+
                                         <div class="error error-hidden"></div>
                                     </div>
                                 </div>
@@ -219,7 +231,18 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
 
                             <!-- 3rd container -->
                             <fieldset class="fieldset">
+                                <div class="form-group userna">
+                                    <label for="">Vendor:</label>
+                                    <select id="vendor" class="mydropdown">
+                                        <?php
+                                        while ($data = mysqli_fetch_array($sqll)) {
+                                            echo "<option value='" . $data['company_name'] . "'>" . $data['company_name'] . "</option>";  // displaying data in option menu
+                                        }
+                                        ?>
 
+                                    </select>
+                                    <div class="error error-hidden"></div>
+                                </div>
 
                                 <div class="form-group userna">
                                     <label for="username">PRICE:<?php echo $eventprice; ?><sup>Lakh</sup></label>

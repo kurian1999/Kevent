@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +25,7 @@
 
 <body>
     <?php
-    session_start();
+
     if (isset($_SESSION['login_user'])) {
         echo "<div class='d-flex justify-content-end' style='width:66vw;'><div style='z-index:2;' class='alert bg-danger text-light alert-dismissible position-fixed mt-3 fade show col-3' role='alert'>
                                         <center><strong>" . $_SESSION['login_user'] . "</strong></center>
@@ -55,13 +58,13 @@
                 </div>
             </div>
             <div class="flex-container">
-                
+
                 <!-- <div>
                     <a href="#">Forget Password?</a>
                 </div> -->
             </div>
             <div class="flex-input">
-                <input type="submit" class="prbtn" value="login" name="lgbtn" >
+                <input type="submit" class="prbtn" value="login" name="lgbtn">
 
             </div>
             <div class="or">

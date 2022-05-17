@@ -29,13 +29,11 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
         <div class="main">
             <div class="header">
                 <div class="logo">
-                    <a href="./index.php"><img src="./image/logo.svg" alt="logo" /></a>
+                    <a href="./vendorinter.php"><img src="./image/logo.svg" alt="logo" /></a>
                 </div>
                 <div class="links">
-                    <a href="./vendorhome.php" class="link">Home</a>
+
                     <a href="./package.php" class="link">Add Package</a>
-                    <a href="" class="link">About</a>
-                    <a href="" class="link">Contact us</a>
                     <a href="./logout.php" class="link">Logout</a>
                 </div>
             </div>

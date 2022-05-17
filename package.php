@@ -6,6 +6,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
   header("Location: ./index.php");
   die();
 } else {
+  $vendorId = $_SESSION['v_id'];
 
 ?>
   <!DOCTYPE html>

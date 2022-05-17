@@ -21,4 +21,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 // echo "Connected successfully";
-?>
+
+$keyId = 'rzp_test_9OisWYreh0Uw6B';
+$keySecret = 'lmNI7Z0rYyg5dtuIghTOF48B';
+$displayCurrency = 'INR';
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
