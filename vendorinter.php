@@ -32,8 +32,9 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                     <a href="./vendorinter.php"><img src="./image/logo.svg" alt="logo" /></a>
                 </div>
                 <div class="links">
-                    <a href="./vendorhome.php" class="link">Vendors</a>
-                    <a href="./bookview.php" class="link">Booking</a>
+                    <a href="./vendorhome.php" class="link" id="venid">Vendors</a>
+                    <a href="./bookview.php" class="link">Package_Booking</a>
+                    <a href="./custombookingview.php" class="link">Custom_Booking</a>
                     <a href="" class="link">contact us</a>
                     <a href="./logout.php" class="link">Log out</a>
                     <!-- <a href="./assets/pages/login.php" class="link login-btn">login</a> -->

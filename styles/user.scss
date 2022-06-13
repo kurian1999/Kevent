@@ -1,10 +1,65 @@
+@import "./components1.scss";
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
 }
-
+    .header {
+      height: 100px;
+      width: 100vw;
+      background: $white;
+      padding: 0 70px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 10px 20px rgba(69, 69, 69, 0.02);
+  
+      .logo {
+        flex: 1;
+  
+        img {
+          width: 151px;
+          height: auto;
+        }
+      }
+  
+      .links {
+        flex: 1;
+        display: flex;
+        column-gap: 30px;
+        justify-content: flex-end;
+        align-items: center;
+  
+        .link {
+          font-family: "Gilroy_SB";
+          font-size: 20px;
+          color: $text;
+          transition: 0.2s ease-in-out;
+  
+          &:hover {
+            color: $primary;
+          }
+        }
+  
+        .login-btn {
+          padding: 5px 56px;
+          border-radius: 10px;
+          background: $primary;
+          color: $white;
+  
+          &:hover {
+            color: $white;
+            box-shadow: 0px 6px 12px rgba(87, 68, 227, 0.3);
+            transform: scale(1.03);
+          }
+  
+          &:active {
+            box-shadow: none;
+            transform: scale(1);
+          }
+        }
+      }
+    }
 .sidebar {
   position: fixed;
   left: 0px;
@@ -179,17 +234,27 @@ $primarycolor: #9a2500;
   }
 }
 .containe {
-  background-image: url("../image/bunch-flowers-leaves-table.png");
+ 
   background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  
+  // overflow: hidden;
+  .optt{
+    margin-right: 20px;
+  }
   .login-form {
-    @include formblur(10px 10px 10px 10px, 90vh);
+    background: rgba(255, 255, 255, 0.68);
+    margin-top: 900px;
+
+    height: auto;
+      width: 42vw;
+      padding: 64px 86px 0 86px;
+      border-radius: 10px;
+      backdrop-filter: blur(25px);
+      box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.25);
   }
   .logo {
     width: 253px;
@@ -258,7 +323,8 @@ $primarycolor: #9a2500;
 }
    .form-checkbox-group{
           display: flex;
-          column-gap: 20px;
+          flex-direction: column;
+          row-gap: 20px;
           .checklabel{
             display: flex;
             column-gap: 6px;

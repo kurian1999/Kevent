@@ -402,4 +402,15 @@ body {
   font-size: 16px;
   color: #1e1e1e;
 }
+
+.main .approtable {
+  margin-top: 60px;
+}
+
+.main .hb1 {
+  margin-bottom: 32px;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
 /*# sourceMappingURL=indexstyle.css.map */

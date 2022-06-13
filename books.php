@@ -65,82 +65,36 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                             <fieldset class="fieldset active-frm">
                                 <div class="form-min-group">
                                     <div class="form-label-flex">
-                                        <label for="pin">Today's Date: <sup>*</sup></label>
-                                        <input type="date" name="todate" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                                        <!-- <label for="pin">Today's Date: <sup>*</sup></label>
+                                        <input type="date" name="todate" id="datepicker" class="form-min-control" placeholder="" autocomplete="off" min="<?php echo date('Y-m-d') ?>" /> -->
                                         <input type="hidden" name="getId" value="<?php echo $book_id; ?>">
                                         <input type="hidden" name="userid" value="<?php echo $userid; ?>">
                                         <input type="hidden" name="vendorid" value="<?php echo $vendorid; ?>">
                                         <div class="error error-hidden"></div>
                                     </div>
                                 </div>
-                                <!-- <div class="form-group">
-                  <label for="type">Type:<sup>*</sup></label>
-                  <div class="d-flex">
-                    <div class="col">
-                      <div class="form-radio-group">
-                        <div class="">
-                          <input
-                            type="radio"
-                            name="type"
-                            id="radio-type"
-                            value="Corporation"
-                          />
-                          <label for="">Corporation</label>
-                        </div>
-                        <div class="">
-                          <input
-                            type="radio"
-                            name="type"
-                            id="radio-type"
-                            value="Partnership"
-                          />
-                          <label for="">Partnership</label>
-                        </div>
-                      </div>
-                      <div class="form-radio-set2-group">
-                        <div class="">
-                          <input
-                            type="radio"
-                            name="type"
-                            id="radio-type"
-                            value="Individual"
-                          />
-                          <label for="">Individual</label>
-                        </div>
-                        <div class="">
-                          <input
-                            type="radio"
-                            name="type"
-                            id="radio-type"
-                            value="Other"
-                          />
-                          <label for="">Other</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
+
                                 <div class="form-min-group">
                                     <div class="form-label-flex phoname">
                                         <label for="phone">Address <sup>*</sup></label>
-                                        <input type="text" name="adname" id="phname" class="form-min-control" placeholder="Street Address" autocomplete="off" />
+                                        <input type="text" name="adname" id="phname" class="form-min-control" placeholder="Street Address" autocomplete="off" required />
                                         <div class="error error-hidden"></div>
                                     </div>
                                     <div class="form-label-flex cityna">
                                         <label for="city">City <sup>*</sup></label>
-                                        <input type="text" name="ctyname" id="ctyname" class="form-min-control" placeholder="" autocomplete="off" />
+                                        <input type="text" name="ctyname" id="ctyname" class="form-min-control" placeholder="" autocomplete="off" required />
                                         <div class="error error-hidden"></div>
                                     </div>
                                 </div>
                                 <div class="form-min-group">
                                     <div class="form-label-flex statena">
                                         <label for="state">State <sup>*</sup></label>
-                                        <input type="text" name="statename" id="stname" class="form-min-control" placeholder="Kerala" autocomplete="off" />
+                                        <input type="text" name="statename" id="stname" class="form-min-control" placeholder="Kerala" autocomplete="off" required />
                                         <div class="error error-hidden"></div>
                                     </div>
                                     <div class="form-label-flex zipna">
                                         <label for="pin">Pincode <sup>*</sup></label>
-                                        <input type="text" name="zip" id="zipid" class="form-min-control" placeholder="686008" autocomplete="off" />
+                                        <input type="number" name="zip" id="zipid" class="form-min-control" placeholder="686008" autocomplete="off" maxlength="6" required />
 
                                         <div class="error error-hidden"></div>
                                     </div>
@@ -153,7 +107,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                                     </div>
                                     <div class="form-label-flex">
                                         <label for="pin">Event Date:<sup>*</sup></label>
-                                        <input type="date" name="evdate" id="zipid" class="form-min-control" placeholder="" autocomplete="off" />
+                                        <input type="date" name="evdate" id="zipid" class="form-min-control" placeholder="" autocomplete="off" min="<?php echo date('Y-m-d') ?>" required />
                                         <div class="error error-hidden"></div>
                                     </div>
                                 </div>
@@ -165,19 +119,19 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                                     </div>
                                     <div class="form-label-flex">
                                         <label for="pin">Event Location:<sup>*</sup></label>
-                                        <input type="text" name="evloc" id="vatcerfid" class="form-min-control" placeholder="" autocomplete="off" />
+                                        <input type="text" name="evloc" id="vatcerfid" class="form-min-control" placeholder="" autocomplete="off" required />
                                         <div class="error error-hidden"></div>
                                     </div>
                                 </div>
                                 <div class="form-min-group">
                                     <div class="form-label-flex serna">
                                         <label for="tin">Start Time:<sup>*</sup></label>
-                                        <input type="time" name="stime" id="sercerfid" class="form-min-control" placeholder="" autocomplete="off" />
+                                        <input type="time" name="stime" id="sercerfid" class="form-min-control" placeholder="" autocomplete="off" required />
                                         <div class="error error-hidden"></div>
                                     </div>
                                     <div class="form-label-flex">
                                         <label for="pin">End Time: <sup>*</sup></label>
-                                        <input type="time" name="etime" id="sercerfid" class="form-min-control" placeholder="" autocomplete="off" />
+                                        <input type="time" name="etime" id="sercerfid" class="form-min-control" placeholder="" autocomplete="off" required />
                                         <div class="error error-hidden"></div>
                                     </div>
                                 </div>
@@ -233,14 +187,14 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                             <fieldset class="fieldset">
                                 <div class="form-group userna">
                                     <label for="">Vendor:</label>
-                                    <select id="vendor" class="mydropdown">
+                                    <!-- <select id="vendor" class="mydropdown">
                                         <?php
                                         while ($data = mysqli_fetch_array($sqll)) {
                                             echo "<option value='" . $data['company_name'] . "'>" . $data['company_name'] . "</option>";  // displaying data in option menu
                                         }
                                         ?>
 
-                                    </select>
+                                    </select> -->
                                     <div class="error error-hidden"></div>
                                 </div>
 
@@ -269,6 +223,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
 
         <script src="./js/signupAnim.js"></script>
         <script src="./js/signup.js"></script>
+
     </body>
 
     </html>

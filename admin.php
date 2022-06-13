@@ -59,12 +59,12 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
         <table id="customers1" class="display">
             <thead>
                 <tr>
-                    
+
                     <th>Email</th>
                     <th>User_Type</th>
                     <th>Name</th>
                     <th>Mob</th>
-                    <th>Password</th>
+                    <!-- <th>Password</th> -->
                     <th>Action</th>
                 </tr>
             </thead>
@@ -81,7 +81,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                         <td><?php echo $row["User_type_id"]; ?></td>
                         <td><?php echo $row["name"]; ?></td>
                         <td><?php echo $row["Mob_num"]; ?></td>
-                        <td><?php echo $row["password"]; ?></td>
+                        <!-- <td><?php echo $row["password"]; ?></td> -->
                         <td><a href='./remove.php?id=<?php echo $row["rid"]; ?>'><button class="buttonn">
                                     <p>Remove</p>
                                 </button></a></td>

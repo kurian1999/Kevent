@@ -33,8 +33,10 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                 </div>
                 <div class="links">
                     <!-- <a href="./vendorhome.php" class="link">Vendors</a> -->
-                    <a href="./userbookstatus.php" class="link">Booking_Status</a>
-                    <a href="" class="link">About</a>
+                    <a href="./custom.php" class="link">Custom</a>
+                    <a href="./userbookstatus.php" class="link">Status</a>
+                    <a href="./report.php" class="link">Report</a>
+                    <a href="" class="link">Profile</a>
                     <a href="" class="link">contact us</a>
                     <a href="./logout.php" class="link">Log out</a>
                     <!-- <a href="./assets/pages/login.php" class="link login-btn">login</a> -->

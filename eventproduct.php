@@ -8,6 +8,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
 } else {
   $user_id = $_SESSION['u_id'];
   $event_id = $_GET['get_id'];
+  $_SESSION['evt_id'] = $event_id;
 ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -36,11 +37,11 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
         <a href="./index.php"><img src="./image/logo.svg" alt="logo" class="logoimg" /></a>
       </div>
       <div class="links">
-        <a href="./vendorprofile.php" class="link">Vendors</a>
+        <!-- <a href="./vendorprofile.php" class="link">Vendors</a> -->
 
         <a href="" class="link">About</a>
         <a href="" class="link">contact us</a>
-        <a href="./login.php" class="link">Sign up</a>
+        <a href="./logout.php" class="link">Log out</a>
         <!-- <a href="./assets/pages/login.php" class="link login-btn">login</a> -->
       </div>
     </div>
@@ -115,16 +116,10 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                 </div>
                 <div class="product-details">
                   <h2>About</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus,
-                    hic saepe sed dolorum aliquam nam facilis possimus laudantium
-                    delectus? Inventore consectetur aperiam quasi ea quod aliquam
-                    velit explicabo exercitationem aspernatur.
+                  <p class="about"><?php echo $row['about']; ?>
+
                   </p>
-                  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Maiores, natus! Illum facere tempore, sit est hic iusto ipsam.
-                    Sunt, amet quasi deleniti ullam modi esse id exercitationem iure
-                    at a!</P>
+
                   <!-- <ul>
                 <li>Color:<span>Black</span></li>
                 <li>Color:<span>Black</span></li>

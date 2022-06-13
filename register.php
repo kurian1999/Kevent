@@ -68,7 +68,7 @@ if (isset($_POST['lgbtn'])) {
     } else if ($counta == 1) {
         $_SESSION['sessionID'] =  session_id();
         $_SESSION['login_user'] =  $username;
-        +header("location:./admin.php");
+        header("location:./admin.php");
     } else if ($countb == 1) {
         $userData = mysqli_fetch_assoc($resultb);
         $_SESSION['v_id'] = $userData['rid'];

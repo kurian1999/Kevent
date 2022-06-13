@@ -32,7 +32,7 @@ if (isset($_SESSION["sessionID"]) != session_id()) {
                     <a href="./index.php"><img src="./image/logo.svg" alt="logo" /></a>
                 </div>
                 <div class="links">
-                    <a href="./index.php" class="link">Home</a>
+                    <a href="./home.php" class="link">Home</a>
 
                     <a href="" class="link">About</a>
                     <a href="" class="link">contact us</a>

@@ -68,9 +68,9 @@ include "./include/condb.php";
         $resultcheck = mysqli_num_rows($result);
         if ($resultcheck > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                ?>
+        ?>
                 <!-- echo "<tr><td>" .$row["vendor_id"] . "</td><td>" . $row["company_name"] . "</td><td>" . $row["type"] . "</td><td>" . $row["phone_no"] . "</td><td>" . $row["state_name"] . "</td><td>" . $row["district_name"] . "</td><td>" . $row["Pincode"] . "</td></tr>"; -->
-                     <tr>
+                <tr>
                     <!-- <td><?php echo $row["vendor_id"]; ?></td> -->
                     <td><?php echo $row["company_name"]; ?></td>
                     <td><?php echo $row["type"]; ?></td>
@@ -80,7 +80,7 @@ include "./include/condb.php";
                     <td><?php echo $row["Pincode"]; ?></td>
 
                 </tr>
-                <?php
+        <?php
             }
             // echo "</table>";
         } else {

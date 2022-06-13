@@ -1,5 +1,8 @@
 <?php
 $connect = new PDO("mysql:host=localhost;dbname=keventdb", "root", "");
+session_start();
+$pid = $_SESSION['evt_id'];
+
 if (isset($_POST["rating_data"])) {
 
     $data = array(
@@ -9,8 +12,8 @@ if (isset($_POST["rating_data"])) {
         ':datetime'            =>    time()
     );
     $query = "INSERT INTO tbl_rating
-	(user_name, user_rating, user_review, datetime) 
-	VALUES (:user_name, :user_rating, :user_review, :datetime)";
+	(user_name, user_rating, user_review,package_id, datetime) 
+	VALUES (:user_name, :user_rating, :user_review,$pid, :datetime)";
 
     $statement = $connect->prepare($query);
 
@@ -30,7 +33,7 @@ if (isset($_POST["action"])) {
     $total_user_rating = 0;
     $review_content = array();
 
-    $query = "SELECT * FROM tbl_rating
+    $query = "SELECT * FROM tbl_rating where `package_id`='$pid'
 	ORDER BY review_id DESC";
 
     $result = $connect->query($query, PDO::FETCH_ASSOC);
